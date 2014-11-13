@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css" />
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <title>Hello World</title>
+
+        
+    </head>
+    <body>
+      
+      
+      <nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+          <div class="navbar-header pull-left">
+            <div class="navbar-brand">Brand</div>
+          </div>
+      
+      
+          <!-- I don't want it apart of the collapsible portion -->
+          <div class="navbar-header pull-right">
+            <ul class="nav navbar-nav pull-left topbutton">
+              <li><a href="Javascript:showAddModal()"><i class="fa fa-plus"></i></a></li>
+            </ul>
+            <ul class="nav navbar-nav pull-right topbutton">
+              <li><a href="#"><i class="fa fa-cog"></i></a></li>
+            </ul>
+          </div>
+          
+        </div>
+      </nav>
+      
+          
+      <div class="container-fluid">
+        
+        <div class="row">
+          <div class="col-md-12">
+             <h1>Apache Cordova</h1>
+             <div id="log">...</id>
+             <div id="deviceready" class="blink">
+                 <p class="event listening">Connecting to Device</p>
+                 <p class="event received">Device is Ready</p>
+             </div>
+          </div>
+        </div>
+        
+        <div id="cardlist">
+          
+        </div>
+
+
+        <div id="addmodal" class="modal fade">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title">New Card</h4>
+              </div>
+              <div class="modal-body">
+                <form role="form">
+                  <div class="form-group">
+                    <label for="firstname">First name</label>
+                    <input type="string" class="form-control" id="firstname" placeholder="Enter first name">
+                  </div>
+                  <div class="form-group">
+                    <label for="lastname">Last name</label>
+                    <input type="string" class="form-control" id="lastname" placeholder="Enter last name">
+                  </div>
+                  <div class="form-group">
+                    <label for="companyname">Company name</label>
+                    <input type="string" class="form-control" id="companyname" placeholder="Enter company name">
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter email">
+                  </div>
+                  <div class="form-group">
+                    <label for="twitter">Twitter</label>
+                    <input type="string" class="form-control" id="twitter" placeholder="Enter twitter">
+                  </div>
+                  <div class="form-group">
+                    <label for="url">URL</label>
+                    <input type="url" class="form-control" id="url" placeholder="Enter URL">
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick="addNewCard()">Save changes</button>
+              </div>
+            </div><!-- /.modal-content -->
+          </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+
+
+      </div>
+
+        <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/pouchdb-3.0.6.min.js"></script>
+        <script type="text/javascript" src="js/moment.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+
+    </body>
+</html>
